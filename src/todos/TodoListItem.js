@@ -35,12 +35,10 @@ const Button = styled.button`
 `
 
 const CompletedButton = styled(Button)`
- 
     background-color: #22ee22;
 `
 
 const RemoveButton = styled(Button)`
-
     background-color: #ee2222;
     margin-left: 8px;
 `

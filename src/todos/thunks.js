@@ -3,14 +3,14 @@ import { createTodo, removeTodo, loadTodosInProgress, loadTodosSuccess, loadTodo
 export const loadTodos = () => async (dispatch, getState) => {
     try {
         dispatch(loadTodosInProgress());
-        const response = await fetch('http://localhost:8080/todos-delay')
+        const response = await fetch('http://localhost:8080/todos')
         const todos = await response.json()
 
         dispatch(loadTodosSuccess(todos))
     }
     catch (err) {
         dispatch(loadTodosFailure());
-        dispatch(displayAlert(e))
+        dispatch(displayAlert(err))
     }
 }
 
